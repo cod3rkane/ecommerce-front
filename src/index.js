@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'reworm';
+import { BrowserRouter } from 'react-router-dom';
 
 import 'antd/dist/antd.css';
 
-import App from './App';
+import { Routes } from './Routes';
 import * as serviceWorker from './serviceWorker';
 
-import './index.scss';
+import './assets/css/index.scss';
 
 ReactDOM.render(
-  <Provider>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider>
+      <Routes />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
